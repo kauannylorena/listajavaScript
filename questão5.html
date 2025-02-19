@@ -1,0 +1,29 @@
+<!--Crie um arquivo HTML que solicite ao usuário através de um prompt
+digitar um número de 1 a 10 e exiba no navegador a tabuada do número
+digitado. Use “document. write” para exibir a tabuada.-->
+
+questão 5
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <script>
+        function gerarTabuada() {
+            let numero = prompt("Digite um número de 1 a 10:");
+            numero = parseInt(numero);
+            if (!isNaN(numero) && numero >= 1 && numero <= 10) {
+                document.write("<h2>Tabuada do " + numero + "</h2>");
+                for (let i = 1; i <= 10; i++) {
+                    document.write(numero + " x " + i + " = " + (numero * i) + "<br>");
+                }
+            } else {
+                document.write("<h2>Valor inválido! Recarregue a página e tente novamente.</h2>");
+            }
+        }
+    </script>
+</head>
+<body onload="gerarTabuada()">
+</body>
+</html>

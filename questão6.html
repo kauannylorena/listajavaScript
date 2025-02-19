@@ -1,0 +1,30 @@
+<!--Crie um arquivo HTML que solicite ao usuário através de um prompt
+digitar num número inteiro e exiba no navegador o fatorial desse número.-->
+
+questão 6
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+    <script>
+        function calcularFatorial() {
+            let numero = prompt("Digite um número inteiro:");
+            numero = parseInt(numero);
+            
+            if (!isNaN(numero) && numero >= 0 && Number.isInteger(numero)) {
+                let fatorial = 1;
+                for (let i = 1; i <= numero; i++) {
+                    fatorial *= i;
+                }
+                document.write("<h2>O fatorial de " + numero + " é " + fatorial + "</h2>");
+            } else {
+                document.write("<h2>Valor inválido! Por favor, insira um número inteiro não negativo.</h2>");
+            }
+        }
+    </script>
+</head>
+<body onload="calcularFatorial()">
+</body>
+</html>

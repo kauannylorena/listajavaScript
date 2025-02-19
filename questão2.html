@@ -1,0 +1,36 @@
+<!--Crie um arquivo HTML que contenha um formulário. Nesse formulário
+deverá ser inserido um botão. Ao clicar no botão, uma função deverá ser
+disparada através do evento onclick do botão. Essa função deverá exibir na
+tela um janela do tipo “alert” contendo a mensagem: “Você clicou no
+botão!”.-->
+
+
+<!DOCTYPE html>
+<html lang="´pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autoria web</title>
+    <script>
+      function Alerta() {
+        alert("Você clicou no botão!");
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Formulário</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="mensagem">Mensagem:</label><br />
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea
+      ><br /><br />
+
+      <button type="submit" onclick="Alerta()">Enviar</button>
+    </form>
+  </body>
+</html>

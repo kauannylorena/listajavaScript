@@ -1,0 +1,40 @@
+<!--Crie um arquivo HTML e nele defina um script contendo uma função
+chamada “nomear”. Essa função deverá ser acionada através do evento
+onclick de um botão de formulário contendo o texto “Ativar perguntar”. A
+função “nomear” deverá exibir uma janela de confirmação com a pergunta:
+“Posso saber qual o seu nome?”. Caso o usuário aperte no botão ok, deverá
+ser exibida uma janela de diálogo com a mensagem: “Qual o seu nome?”.
+Nela o usuário deverá digitar o nome dele. Por fim, deverá ser exibido um
+“alert” para que o usuário visualize a mensagem: “Seja bem-vindo(a)
+nome_digitado”. Caso o usuário aperte no botão cancelar na caixa de
+confirmação, deverá ser exibido apenas um “alert” com a mensagem: “Você
+respondeu que não. Que pena! Bye bye!”-->
+
+questão 3
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome</title>
+    <script>
+        function nomear() {
+            let confirmar = confirm("Posso saber qual o seu nome?");
+            if (confirmar) {
+                let nome = prompt("Qual o seu nome?");
+                if (nome) {
+                    alert("Seja bem-vindo(a) " + nome + "!");
+                } else {
+                    alert("Você não digitou um nome.");
+                }
+            } else {
+                alert("Você respondeu que não. Que pena! Bye bye!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Qual o seu nome?</h2>
+    <button onclick="nomear()">Ativar perguntar</button>
+</body>
+</html>
